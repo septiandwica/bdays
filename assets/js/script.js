@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let audioContext;
   let analyser;
   let microphone;
-  let audio = new Audio('hbd.mp3');
+  let audio = new Audio('./assets/music/hbd.mp3');
 
 
   function updateCandleCount() {

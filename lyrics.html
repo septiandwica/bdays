@@ -4,44 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birth Day</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="./asset/heart.js"></script>
-    <script>
-        let queryData = getSearchData()
-        let animateHeartCanvas = new AnimateHeartCanvas(
-            Number(queryData.hMin),
-            Number(queryData.hMax),
-            Number(queryData.countHeart),
-            Number(queryData.sizeMin),
-            Number(queryData.sizeMax),
-            queryData.bgColor,
-        )
-        // Menambahkan elemen ke div dengan id bglove
-        document.getElementById('bglove').appendChild(animateHeartCanvas.canvas);
-        function getSearchData(){
-            let searchString = location.search;
-            if (searchString){
-                let obj = {};
-                searchString = searchString.substring(1, searchString.length);
-                let tempArray = searchString.split('&');
-                tempArray.forEach(item => {
-                    obj[item.split('=')[0]] = decodeURIComponent(item.split('=')[1]);
-                });
-                return obj;
-            } else {
-                return false;
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/heart.js"></script>
   </head>
   <body>
     <audio autoplay loop>
-      <source src="./text.mp3" type="audio/mpeg">
+      <source src="./assets/music/text.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
-
-    <div class="bg-hearts">
+    <section class="content">
+      <div class="bg-hearts">
         <div class="bg_heart"></div>
 
         <div class="heart-container">
@@ -97,8 +70,10 @@
         the more I love you
       </p>
     </div>
+    </section>
+    
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

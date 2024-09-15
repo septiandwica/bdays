@@ -230,13 +230,12 @@ class AnimateHeartCanvas {
 
     // 画一个心
     drawHeart(x, y, width, height, colorFill) {
-
         let canvasHeart = document.getElementById('heartLayer')
         let contextHeart = canvasHeart.getContext('2d')
 
         contextHeart.save()
         contextHeart.beginPath()
-        let topCurveHeight = height * 0.3
+        let topCurveHeight = height * 0.4; // Ubah tinggi kurva atas untuk bentuk yang lebih bulat
         contextHeart.moveTo(x, y + topCurveHeight)
         // top left curve
         contextHeart.bezierCurveTo(
@@ -247,12 +246,12 @@ class AnimateHeartCanvas {
         // bottom left curve
         contextHeart.bezierCurveTo(
             x - width / 2, y + (height + topCurveHeight) / 2,
-            x, y + (height + topCurveHeight) / 1.4,
+            x, y + (height + topCurveHeight) / 1.5, // Ubah untuk bentuk yang lebih bulat
             x, y + height
         )
         // bottom right curve
         contextHeart.bezierCurveTo(
-            x, y + (height + topCurveHeight) / 1.8,
+            x, y + (height + topCurveHeight) / 1.5, // Ubah untuk bentuk yang lebih bulat
             x + width / 2, y + (height + topCurveHeight) / 2,
             x + width / 2, y + topCurveHeight
         )
