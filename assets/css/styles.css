@@ -28,8 +28,8 @@ body{
 
 .hearts span{
     position: relative;
-    margin: 0 30px;
-    opacity: 1000%;
+    margin: 0 40px;
+    opacity: 70%;
 
     animation: animate 15s linear infinite;
     animation-duration: calc(120s /var(--i));
@@ -129,7 +129,7 @@ body{
 }
 
 .text-lyrics{
-    z-index: 20000;
+    z-index: 20000000000000000;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -139,7 +139,7 @@ body{
 
 .animated-lyrics  {
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     animation: fadeIn 2s ease-in-out, glows 1s ease-in-out infinite alternate; 
 }
@@ -162,4 +162,9 @@ body{
   }
 }
 
+@media screen and (max-width: 576px) {
+  .animated-lyrics  {
+    font-size: 18px;
+}
+}
     

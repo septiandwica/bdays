@@ -344,7 +344,17 @@ input#click {
   height: 100px;
   background-color: #f9a1a1;
 }
-
+button
+{
+  font-family: Dynapuff, sans-serif;
+  
+  font-size: 16px;
+  background-color: #ffcc00; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; cursor: pointer;
+}
 .gift:before {
   content: "";
   position: absolute;
